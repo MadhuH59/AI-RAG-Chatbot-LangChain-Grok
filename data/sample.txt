@@ -1,0 +1,6 @@
+RAG means Retrieval Augmented Generation.
+
+It allows AI models to retrieve external documents
+and use them to answer questions.
+
+LangChain helps build AI agents and RAG pipelines.
