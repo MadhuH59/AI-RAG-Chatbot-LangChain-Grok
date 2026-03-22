@@ -2,34 +2,309 @@
 
 # 🤖 AI RAG Chatbot using LangChain + Groq + Streamlit
 
-This project is a **Retrieval Augmented Generation (RAG) based AI chatbot** built using **LangChain, Groq LLM, Chroma Vector Database, and Streamlit UI**.
+This project is a full-stack AI Agent that combines LLM reasoning, RAG (Retrieval-Augmented Generation), real-time web search, and document understanding with an interactive ChatGPT-like interface.
 
-The chatbot can answer questions based on **custom documents (`sample.txt`)** while also using **LLM knowledge for general questions**.
+Here’s your **complete professional README.md** (ready to paste into GitHub) 🚀
 
 ---
 
-# 📌 Project Architecture
+# 🚀 AI Agent (RAG + Web Search + PDF + Memory)
+
+A full-stack **AI Agent** built using LLMs that can:
+
+* Answer questions from documents 📄
+* Fetch real-time data from the internet 🌐
+* Perform calculations ➗
+* Maintain conversation memory 💬
+
+---
+
+# 📌 Features
+
+## 🧠 AI Agent
+
+* Intelligent **tool selection system**
+* Chooses between:
+
+  * SEARCH (documents)
+  * WEB (real-time info)
+  * CALCULATE (math)
+  * NONE (general knowledge)
+
+---
+
+## 📄 RAG (Retrieval-Augmented Generation)
+
+* Uses document-based context for accurate answers
+* Supports:
+
+  * `sample.txt`
+  * Uploaded PDFs
+* Semantic search using embeddings
+
+---
+
+## 📂 PDF Upload
+
+* Upload PDFs directly from UI
+* Automatically:
+
+  * Extracts content
+  * Splits into chunks
+  * Stores in vector DB
+* Ask questions from your documents
+
+---
+
+## 🌐 Web Search
+
+* Fetches real-time data from internet
+* Handles:
+
+  * Latest news
+  * Stock prices
+  * Current events
+
+---
+
+## ➗ Calculator
+
+* Solves math expressions dynamically
+
+---
+
+## 💬 Chat Memory
+
+* Maintains conversation history
+* Context-aware responses
+* Reset option available
+
+---
+
+## 🧹 Clear Chat
+
+* Clears:
+
+  * Chat history
+  * Agent memory
+* Does NOT delete documents
+
+---
+
+## 🎨 ChatGPT-like UI
+
+* Built using Streamlit
+* Features:
+
+  * Chat interface
+  * Sidebar tools
+  * Clean UI
+
+---
+
+# 🏗️ Project Architecture
+
+## 🔷 High-Level Flow
+
+```
+User Input (UI)
+      ↓
+AI Agent (Tool Decision)
+      ↓
+ ┌───────────────┬───────────────┬───────────────┐
+ │               │               │               │
+SEARCH        WEB SEARCH     CALCULATOR       NONE
+(RAG)         (Internet)     (Math)        (LLM Only)
+ │               │               │               │
+ └───────────────┴───────────────┴───────────────┘
+      ↓
+Context Generation
+      ↓
+LLM (Groq - llama3)
+      ↓
+Final Answer
+      ↓
+Displayed in UI
+```
+
+---
+
+# 🧠 How It Works
+
+## 📄 RAG Flow
+
+```
+Document → Chunking → Embeddings → Vector DB → Retrieval
+```
+
+## 📂 PDF Flow
+
+```
+Upload PDF → Save → Extract → Chunk → Embed → Store → Query
+```
+
+## 💬 Query Flow
 
 ```
 User Question
-     │
-     ▼
-Streamlit UI
-     │
-     ▼
-LangChain Retriever
-     │
-     ▼
-Vector Database (Chroma)
-     │
-Relevant Context Retrieved
-     │
-     ▼
-Groq LLM (Llama Model)
-     │
-     ▼
-Final AI Response
+      ↓
+Agent selects tool
+      ↓
+Context generated
+      ↓
+LLM generates answer
 ```
+
+---
+
+# 📁 Project Structure
+
+```
+AI_agent/
+│
+├── app.py              # Streamlit UI
+├── agent.py            # AI Agent logic
+├── rag.py              # RAG pipeline
+├── tools.py            # Web + Calculator
+├── data/
+│   └── sample.txt      # Default data
+├── uploads/            # Uploaded PDFs
+├── db/                 # Vector DB
+└── requirements.txt
+```
+
+---
+
+# ⚙️ Setup Instructions
+
+## 1️⃣ Clone Repo
+
+```
+git clone <your-repo-url>
+cd AI_agent
+```
+
+---
+
+## 2️⃣ Create Virtual Environment
+
+```
+python -m venv venv
+venv\Scripts\activate   # Windows
+```
+
+---
+
+## 3️⃣ Install Dependencies
+
+```
+pip install -r requirements.txt
+```
+
+---
+
+## 4️⃣ Set API Key
+
+```
+setx GROQ_API_KEY "your_api_key_here"
+```
+
+Restart terminal after this.
+
+---
+
+## 5️⃣ Run App
+
+```
+streamlit run app.py
+```
+
+---
+
+# 🧪 Usage
+
+## 📄 Upload PDF
+
+* Use sidebar
+* Ask questions from document
+
+---
+
+## 🌐 Real-time Queries
+
+```
+latest news today
+BSE stock price today
+```
+
+---
+
+## ➗ Math
+
+```
+234 * 56
+```
+
+---
+
+## 📚 RAG (Local Data)
+
+```
+Ask about sample.txt content
+```
+
+---
+
+# 🛠️ Tech Stack
+
+* Python
+* Streamlit
+* Groq (LLM API)
+* LangChain
+* ChromaDB
+* HuggingFace Embeddings
+* DuckDuckGo Search
+
+---
+
+# 🎯 Skills Demonstrated
+
+* AI Agent Design
+* Retrieval-Augmented Generation (RAG)
+* Vector Databases
+* LLM Integration
+* Prompt Engineering
+* Tool-based AI Systems
+* Full-stack AI App Development
+
+---
+
+# 🚀 Future Improvements
+
+* Real-time stock API 📈
+* Multi-PDF management 📂
+* Streaming responses ⚡
+* Chat history persistence 🗄️
+* Deployment (Cloudflare / Render) 🌐
+
+---
+
+# 🙌 Conclusion
+
+This project demonstrates a **real-world AI agent system** combining:
+
+* LLM reasoning
+* Document intelligence
+* Real-time data access
+* Interactive UI
+
+---
+
+# ⭐ If you like this project, give it a star!
+
+---
+
+
 
 ---
 

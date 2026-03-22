@@ -1,9 +1,10 @@
+tiktoken
+streamlit
+groq
 langchain
 langchain-community
-langchain-core
+langchain-text-splitters
 chromadb
-streamlit
-pypdf
-groq
-tiktoken
 sentence-transformers
+duckduckgo-search
+pypdf
