@@ -4,8 +4,6 @@
 
 This project is a full-stack AI Agent that combines LLM reasoning, RAG (Retrieval-Augmented Generation), real-time web search, and document understanding with an interactive ChatGPT-like interface.
 
-Here’s your **complete professional README.md** (ready to paste into GitHub) 🚀
-
 ---
 
 # 🚀 AI Agent (RAG + Web Search + PDF + Memory)
