@@ -575,8 +575,6 @@ What is Python?
 # 📈 Future Improvements
 
 * Upload multiple documents
-* PDF support
-* Chat history memory
 * Voice input
 * Deploy to cloud
 
